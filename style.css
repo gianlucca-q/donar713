@@ -1,0 +1,397 @@
+:root {
+    --primary-color: #eb3a31;
+    --secondary-color: #429799;
+    --white: #fffdfa;
+    --black: #111111;
+}
+::selection {
+    color: var(--white);
+    background: var(--primary-color);
+}
+/* ------------------------------------ */
+html, body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    max-width: 100%;
+    font-family: 'Segoe UI';
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+/* ------------------------------------ */
+p {
+    margin: 0;
+}
+a, a:hover { 
+    text-decoration: none;
+    color: var(--black);
+}
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+header {
+    height: 90px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--white);
+}
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+    margin: auto;
+    max-width: 70%;
+    height: 100%;
+}
+/* ------------------------------------ */
+.brand-link, .brand {
+    height: 100%;
+}
+.menu-icon {
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+    font-size: 2em;
+}
+/* ------------------------------------ */
+nav {
+    display: flex;
+    flex-direction: row;
+}
+nav a {
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--black);
+    letter-spacing: 0.15em;
+    position: relative;
+}
+nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--primary-color);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+nav a:hover:after {
+    width: 100%;
+    left: 0;
+}
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+.sectionPhone {
+    display: none;
+}
+/* ------------------------------------ */
+.sectionCarousel {
+    position: relative;
+    width: 100%;
+}
+/* ------------------------------------ */
+.carousel {
+    filter: blur(3px);
+}
+.carousel-item img {
+    max-height: 70vh;
+    object-fit: cover;
+    object-position: 0 70%;
+}
+/* ------------------------------------ */
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 50%;
+    
+    width: 20%;
+    padding-bottom: 20%;
+    border-radius:50%;
+}
+.circleImg {
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    
+    width: 70%;
+    
+    -webkit-user-drag: none;
+    user-select: none;
+}
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+.sectionInfo {
+    text-align: center;
+    margin: 30px auto 0;
+}
+/* ------------------------------------ */
+.divInfo{
+    margin: auto;
+}
+/* ------------------------------------ */
+.imgInfo {
+    object-fit: cover;
+    object-position: 0px 80%;
+    padding: 0;
+    max-height: 300px;
+}
+/* ------------------------------------ */
+.divInfoText {
+    margin: auto;
+    text-align: center;
+    padding: 0 10%;
+}
+.divInfoText h2 {
+    font-size: 2.3em;
+    font-weight: 700;
+}
+.divInfoText p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.divInfoText span {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+/* ------------------------------------ */
+.btn {
+    margin-top: 2%;
+    border: 3px solid var(--white);
+    color: var(--white);
+    font-size: 1.2em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#encuesta .btn:hover {
+    color: var(--secondary-color);
+    background-color: var(--white);
+}
+#historia .btn:hover {
+    color: var(--primary-color);
+    background-color: var(--white);
+}
+/* ------------------------------------ */
+#encuesta {
+    background-color: #429799;
+    color: var(--white);
+    margin: 2% auto;
+}
+#historia {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 10%;
+    padding: 0 3%;
+    position: relative;
+}
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+.divFooterImgs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 2% auto;
+    width: 30%;
+    height: 10%;
+}
+.footerBrand {
+    height: 100%;
+}
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+footer {
+    margin: 0;
+    background-color: #e2e2e2;
+    height: 5%;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+footer p {
+    margin: auto;
+    padding: 0;
+
+    color: var(--black);
+    font-size: .9em;
+}
+.author:hover {
+    color: var(--primary-color);
+}
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+@media (max-width: 1800px) {
+    .circle {
+        transition: all 1s;
+        width: 30%;
+        padding-bottom: 30%;
+    }
+    .divInfoText h2 {
+        font-size: 2em;
+    }
+    .divInfoText p {
+        font-size: 1em;
+    } 
+}
+@media (max-width: 1500px) {
+    .circle {
+        width: 40%;
+        padding-bottom: 40%;
+    }
+    .divInfoText h2 {
+        font-size: 1.8em;
+    }
+}
+@media (max-width: 1400px) {
+    .divInfo {
+        max-width: 70%;
+    }
+    #historia {
+        flex-direction: column-reverse;
+    }
+    .divInfoText {
+        padding: 5%;
+    }
+    header div {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .divInfoText h2 {
+        font-size: 1.8em;
+    }
+    .divFooterImgs {
+        width: 100%;
+    }
+    .nav-bar {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        
+        width: 100%;
+        background-color: var(--white);
+        text-align: center;
+    }
+    .nav-bar.responsive {
+        display: flex;
+        flex-direction: column;
+    }
+    nav a:after {
+        background: none
+    }
+    .nav-bar a {
+        margin: 1% 0;
+    }
+    .menu-icon {
+        display: block;
+        z-index: 1;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .sectionInfo {
+        margin: auto;
+    }
+    #encuesta {
+        margin: 0;
+    }
+    .divInfo {
+        max-width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .sectionPhone {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        height: 50%;
+        margin: auto;
+        position: relative;
+    }
+    .phoneBackground {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: blur(3px);
+    }
+    .phoneBrand {
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .sectionCarousel {
+        display: none;
+    }
+    .divInfoText h2 {
+        font-size: 1.5em;
+    }
+    footer p {
+        font-size: .7em;
+    }
+    .divFooterImgs {
+        height: 7%;
+    }
+}
+@media (max-width: 380px) {
+    header div {
+        display: flex;
+        align-items: center;
+    }
+    .brand-link {
+        height: 90%;
+    }
+    .phoneBrand {
+        height: 40%;
+    }
+    .btn {
+        font-size: 1em;
+        border-width: 2px;
+    }
+}
+
